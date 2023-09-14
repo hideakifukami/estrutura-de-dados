@@ -5,11 +5,13 @@ import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class Principal {
 	final static String ARQ_IN = "resources\\musica.txt";
 	static FileReader fr;
 	static BufferedReader br;
+	static Scanner sc = new Scanner(System.in);
 
 	final static String ARQ_OUT = "resources\\saida.txt";
 	static FileWriter fw;
@@ -25,6 +27,30 @@ public class Principal {
 		escrita();
 		ex1DataSubstring();
 		ex2DataSplit();
+		ex3NameSplit();
+		ex4Trim();
+		
+	}
+
+	private static void ex4Trim() {
+		String resposta = "reginaldo rossi";
+		System.out.println("Quem descobriu o Brasil?");
+		String respostaUser = sc.nextLine();
+		
+		if (respostaUser.trim().toLowerCase().equals(resposta)) {
+			System.out.println("Parabéns!");
+		} else {
+			System.out.println("Cê vai morê hein!");
+		}
+		
+	}
+
+	private static void ex3NameSplit() {
+		System.out.println("Informe nome e sobrenome: ");
+		String nomeCompleto = sc.nextLine();
+		String[] nomeCompletoList = nomeCompleto.split(" ");
+		int pos = nomeCompletoList.length - 1;
+		System.out.println(nomeCompletoList[pos]);
 		
 	}
 
