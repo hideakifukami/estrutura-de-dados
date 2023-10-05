@@ -3,7 +3,6 @@ package pilha;
 public class Main {
 	public static void main(String[] args) {
 		Pilha pilha = new Pilha();
-		Pilha pilhaInvertida = new Pilha();
 		
 		System.out.println(pilha.isEmpty());
 
@@ -42,6 +41,7 @@ public class Main {
 
 	private static void inverterPilha(Pilha pilha) {
 		while(!pilha.isEmpty()) {
+			Pilha pilhaInvertida = new Pilha();
 			pilhaInvertida.push(pilha.pull());
 		}
 		
