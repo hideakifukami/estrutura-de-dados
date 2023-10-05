@@ -43,9 +43,9 @@ public class Fila {
 		}
 		Object info = inicio.getInfo();
 		inicio = inicio.getProx();
+		tamanho--;
 		
-		return info;
-		
+		return info;		
 	}
 	
 	
