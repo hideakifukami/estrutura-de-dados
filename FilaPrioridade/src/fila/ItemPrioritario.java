@@ -2,12 +2,14 @@ package fila;
 
 public class ItemPrioritario {
 
-	private int prioridade;
     private Object info;
+	private int prioridade;
 
-    public ItemPrioritario(int prioridade, Object info) {
-        this.prioridade = prioridade;
+
+    public ItemPrioritario(Object info, int prioridade) {
         this.info = info;
+        this.prioridade = prioridade;
+
     }
 
     public int getPrioridade() {
