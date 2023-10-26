@@ -42,7 +42,7 @@ public class Principal {
 	}
 	
 	private static void bubbleSortRec(int[] valores) {
-		int aux,j;
+		int aux;
 		boolean x = false;
 		for (int i = 1; i < valores.length; i++) {			
 			if (valores[i-1] > valores[i]) {
