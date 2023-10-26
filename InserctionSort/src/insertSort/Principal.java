@@ -31,11 +31,11 @@ public class Principal {
 	private static void bubbleSort(int[] valores) {
 		int aux,j;
 		for (int i = 0; i < valores.length; i++) {			
-			for (j = 1; j < valores.length; j++) {
-				if (valores[j-1] > valores[j]) {
-					aux = valores[j];
-					valores[j] = valores[j-1];
-					valores[j-1] = aux;
+			for (j = 0; j < valores.length - 1; j++) {
+				if (valores[j+1] < valores[j]) {
+					aux = valores[j+1];
+					valores[j+1] = valores[j];
+					valores[j] = aux;
 				}
 			}
 		}
@@ -44,11 +44,11 @@ public class Principal {
 	private static void bubbleSortRec(int[] valores) {
 		int aux;
 		boolean x = false;
-		for (int i = 1; i < valores.length; i++) {			
-			if (valores[i-1] > valores[i]) {
-				aux = valores[i];
-				valores[i] = valores[i-1];
-				valores[i-1] = aux;
+		for (int i = 0; i < valores.length - 1; i++) {			
+			if (valores[i+1] < valores[i]) {
+				aux = valores[i+1];
+				valores[i+1] = valores[i];
+				valores[i] = aux;
 				x = true;
 			}			
 		}
