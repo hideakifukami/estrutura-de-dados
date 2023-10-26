@@ -5,8 +5,9 @@ public class Principal {
 
 	public static void main(String[] args) {
 		// inserctionSort(valores);
+		//bubbleSort(valores);
 		bubbleSortRec(valores);
-
+		
 		for (int i = 0; i < valores.length; i++) {
 			System.out.print(valores[i]);
 		}
@@ -54,7 +55,6 @@ public class Principal {
 		
 		if (x) {
 			bubbleSortRec(valores);
-			x = false;
 		}
 	
 	}
