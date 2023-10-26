@@ -6,7 +6,8 @@ public class Principal {
 	public static void main(String[] args) {
 		// inserctionSort(valores);
 		//bubbleSort(valores);
-		bubbleSortRec(valores);
+		//bubbleSortRec(valores);
+		bubbleSortN(valores);
 		
 		for (int i = 0; i < valores.length; i++) {
 			System.out.print(valores[i]);
@@ -57,5 +58,21 @@ public class Principal {
 			bubbleSortRec(valores);
 		}
 	
+	}
+	
+	private static void bubbleSortN(int[] valores) {
+		int aux, i;
+		boolean x;
+		do {
+			x = false;
+			for (i = 0; i < valores.length - 1; i++) {			
+				if (valores[i+1] < valores[i]) {
+					aux = valores[i+1];
+					valores[i+1] = valores[i];
+					valores[i] = aux;
+					x = true;
+				}			
+			}
+		} while (x);
 	}
 }
